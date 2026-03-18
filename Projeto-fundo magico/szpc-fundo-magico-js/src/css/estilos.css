@@ -1,0 +1,224 @@
+body {
+    background-color: #0f131a;
+    color: #ffffff;
+    background: url(../images/bg.JPG);
+    font-family: "Roboto Mono", monospace;
+    line-height: 1.4;
+    padding: 32px 24px;
+}
+
+/*
+   BACKGROUND COLOR - DEFINI UMA COR DE AZUL QUASE PRETO COMO PLANO DE FUNDO DA PÁGINA
+   BACKGROUND: URL - DEFINI UMA IMAGEM COMO PLANO DE FUNDO DA PÁGINA, COMO VEM APÓS A COR DEFINIDA, A IMAGEM FICA POR CIMA
+   FONT-FAMILY - DEFINI UMA FONTE (ESTILO MÁQUINA DE ESCREVER) PARA CÓDIGO, E MONOSPACE SERVE PARA QUE SE O USUÁRIO NÃO TIVER A PRIMEIRA,SEJA   UTILIZADA QUALQUER UMA
+   LINE-HEIGHT - ESPAÇAMENTO ENTRE LINHAS
+*/
+
+.header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/*
+   TEXT-ALIGN - SERVE PARA QUE TUDO DENTRO DE "HEADER" OU "DIV", NÃO FIQUE POR PADRÃO FIXADO A ESQUERDA, MAS FIQUE CENTRALIZADO
+   MARGIN-BOTTOM - SERVE PARA CRIAR UM ESPAÇO ENTRE OS ELEMENTOS, PARA QUE O BOTÃO NÃO FIQUE GRUDADO NO TITULO (POR EXEMPLO)
+*/
+
+.header h1{
+    margin-bottom: 16px;
+    font-size: 48px;
+}
+
+/*
+   FONT-SIZE - DEFINI O TAMANHO DA LETRA
+*/
+
+.header .subtitle {
+    font-size: 19.2px;
+    color: #ffffffcc;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*
+   COLOR - LETRAS "F" DEFINEM A COR (BRANCO NESSE CASO) E C DEFINE A TRANSPARÊNCIA 
+   MAX-WIDTH - DEFINI O TEXTO CENTRALIZADO DENTRO DE UM BOLCO, IMPENDINDO QUE ELE SE ESPALHE DE UM LADO A OUTRO DA TELA
+   MARGIN: 0 AUTO - GARANTE QUE O TEXTO FIQUE EXTAMENTE NO MEIO DA TELA  
+*/
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/*
+   TEM O MESMO OBJETIVO QUE NO BLOCO ANTERIOR
+*/
+
+.card{
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+/*
+   BORDER - CRIA A COR BRANCA (NOS NÚMEROS 255), TAMBÉM A TRANSPARÊNCIA (O.2) E "1PX SOLID" DEFINI UMA LINHA FINA PARA CONTORNO
+   BORDER-RADIUS - CRIA UM ARREDONDAMENTO NAS BORDAS DAS CAIXAS
+   PADDING - CRIA UM ESPAÇAMENTO INTERNO ENTRE A BORDA DA CAIXA E O CONTEÚDO DELA
+   MARGIN-BOTTOM - SERVE PARA EMPURRAR O ELEMENTO QUE ESTIVER EMBAIXO COM 32PX DE DISTÂNCIA, NÃO FICANDO GRUDADOS
+*/
+
+.card-header{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 20.8px;
+}
+
+/*
+   TEXT-ALIGN - SERVE PARA ALINHAR O TEXTO CONTIDO NESSE ELEMENTO
+*/
+
+.form-group textarea{
+    background-color: rgba(255,255,255,0.05);
+    color: #ffffff;
+    width: 100%;
+    min-height: 120px;
+    border: 1px solid #474646;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 16px;
+}
+
+/*
+   BACKGROUND-COLOR - SERVE PARA DEFINIR UM BRANCO COM 5% DE OPACIDADE QUE CRIA EFEITO DE VIDRO FUMÊ SUTIL
+   COLOR - DEFINI A COR DO TEXTO QUE O USUÁRIO DIGITA COMO BRANCO
+   WIDTH - FAZ COM QUE A CAIXA OCUPE TODA A LARGURA DISPONÍVEL DO ELEMENTO PAI (O <div class="form-group"> É O PAI.
+   O <textarea> É O FILHO. WIDTH 100% NO TEXTAREA, SERVE PARA DEIXAR O ELEMENTO "textarea" (O FILHO), COM 100% DA LARGURA DO ELEMENTO "from-group" O PAI.)
+   MIN-HEIGHT - GARANTE QUE MESMO QUE VAZIA, A CAIXA NÃO SEJA MENOR QUE 120PX
+   BORDER - DEFINI UMA BORDA FINA SÓLIDA CINZA ESCURO, PARA DELIMITAR O CAMPO SEM CHAMAR ATENÇÃO
+   BORDER-RADIUS - SERVE PARA ARREDONDAR AS BORDAS DA CAIXA
+*/
+
+.form-group textarea:focus{
+    outline: none;
+    border-color: #a655f7;
+}
+
+/*
+   OUTLINE - SERVE PARA EXCLUIR A BORDA AZUL OU PRETA COLOCADA AUTOMATICAMENTE PELO NAVEGADOR
+   BORDER - DEFINI A COR DA BORDA
+*/
+
+.form-group textarea::placeholder{
+    color: #a19e9e;
+}
+
+/*
+   ESSE TRECHO SERVE PARA SELECIONAR UM PSEUDO-ELEMENTO, UM ELEMENTO TEMPORÁRIO QUE O NAVEGADOR COLOCA LA DENTRO   
+*/
+
+.form-group .btn-magic{
+    width: 100%;
+    padding: 16px 32px;
+    background: linear-gradient(90deg, #a655f7 0%, #ff80aa 100%);
+    color: #ffffff;
+    font-size: 17.6px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*
+   WIDTH: 100% - O BOTÃO VAI OCUPAR TODA A LARGURA DISPONÍVEL DO ELEMENTO PAI 
+   PADDING: 16PX - CRIA UM ESPAÇO INTERNO CIMA/BAIXO DE 16PX E 32PX NAS LATERAIS
+   BACKGROUND: LINEAR-GRADIENT - CRIA UM DEGRADÊ QUE COMEÇA DO ROXO A ESQUERDA INDO PARA UM ROSA A DIREITA
+   COLOR - DEFINI A COR DO TEXTO COMO BRANCO
+   FONT-SIZE / FONT-WEIGHT - DEFINEM O TAMANHO DO TEXTO LEVEMENTE MAIOR QUE O PADRÃO E EM NEGRITO
+   BORDER: NONE - REMOVE A BORDA PADRÃO DO NAVEGADOR
+   CURSOR: POINTER - FAZ O CURSOR DO MOUSE PARA UMA "MÃOZINHA" DE LINK
+   TRANSITION - DEFINI UMA MUDANÇA LENTA E SUAVE DE 0.3S 
+*/
+
+.form-group .btn-magic:hover{
+    transform: translateY(-2px)
+}
+
+/*
+   NESSE BLOCO DEPOIS DE DEFINIDO ANTERIORMENTE UMA TRANSIÇÃO SUAVE, AGORA ESSE BLOCO FAZ COM QUE O ELEMENTO SE DESLOQUE 2PX PARA CIMA
+*/
+
+.preview-card{
+    display: none;
+}
+
+/* 
+   FAZ COM QUE O ELEMENTO NÃO OCUPE NENHUM ESPAÇO NA PÁGINA  
+*/
+
+.code-grid{
+    display: flex;
+    gap: 24px
+}
+
+/*
+   DISPLAY: FLEX - ATIVA O FLEXBOX COLOCANDO OS ELEMTENTOS LADO A LADO, POR PADRÃO. SE AJUSTAM AUTOMATICAMENTE AS JANELAS
+   GAP - CRIA UM ESPAÇO ENTRE 2 ELEMENTOS SEM PRECISAR USAR MARGIN INDIVIDUALMENTE, ELE FUNCIONA COM 2 ELEMENTOS, NÃO COM 1
+*/
+
+.code-card{
+    background-color: #21242a;
+    border: 1px solid #ffffff33;
+    padding: 24px;
+    width: 50%;
+}
+
+/*
+   WIDTH: 50% - DEFINI QUE O ELEMENTO OCUPE METADE O ESPAÇO DO ELEMENTO PAI
+*/
+
+.code-title{
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+
+.code-block{
+    background-color: #0a0c10;
+    color: #5eead4;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+   WHITE-SPACE: PRE-WRAP - PRESERVA OS ESPAÇOS E AS QUEBRAS DE LINHA NO HTML. OBRIGA O TEXTO A PULAR DE LINHA QUANDO CHEGAR AO FIM DA LARGURA DO BLOCO
+   WORD-WRAP: BREAK-WORD - SE HOUVER UMA PALAVRA OU LINHA DE CÓDIGO MUITO LONGA (SEM ESPAÇOS) QUE NÃO CAIBA NA LARGURA, O NAVEGADOR A "QUEBRA" À FORÇA PARA EVITAR QUE APAREÇA UMA BARRA DE ROLAGEM HORIZONTAL FEIA OU QUE O TEXTO SAIA PARA FORA DO CONTAINER 
+*/
+
+#preview-section {
+    display: block !important; /* Força a exibição */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*
+   DISPLAY: BLOCK - FORÇA A EXIBIÇÃO DESSA PARTE COMO UM BLOCO. ÚTIL PARA GARANTIR QUE A SEÇÃO SEMPRE EXISTA VISUALMENTE
+   POSITION: FIXED - FORÇA O ELEMENTO A FICAR NA POSIÇÃO AINDA QUE O USUÁRIO ROLE A TELA
+   TOP E LEFT - ALINHAM O ELEMENTO NO CAMPO SUPERIOR ESQUERDO
+   WIDTH - DEFINE A LARGURA COMO 100% DA LARGURA DA JANELA 
+   HEIGHT - DEFINE A ALTURA COMO 100% DA ALTURA DA JANELA 
+   Z-INDEX: -1 - COLOCA O ELEMENTO ATRÁS DE TODOS OS OUTROS DA PÁGINA, QUE TEM PADRÃO Z-INDEX: 0 OU MAIOR
+   POINTER-EVENTS: NONE - TORNA O ELEMENTO VISÍVEL, MAS SE TORNA CLICÁVEL-TRANSPARENTE 
+*/
+

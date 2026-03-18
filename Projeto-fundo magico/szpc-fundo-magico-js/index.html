@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <title>Semana do Zero ao Programador Contratado - Fundo Mágico</title>
+
+<!-- 
+    CABEÇALHO DO CÓDIGO COM O TÍTULO E CONFIGURAÇÕES IMPORTANTES 
+-->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+  </head>
+
+<!-- 
+  LINK PARA PÁGINAS DO PROJETO 
+-->
+
+  <body>
+    <header class="header">
+      <h1>Fundo Mágico</h1>
+      <p class="subtitle">
+        Transforme suas ideias em backgrounds incríveis com o poder da IA.
+        Descreva o que você imagina e veja a magia acontecer.
+      </p>
+    </header>
+
+<!-- 
+    CABEÇALHO DA PÁGINA (O QUE MOSTRA AO USUÁRIO) 
+-->
+
+    <main class="container">                              
+        <section class="card main">                      
+        <h2 class="card-header">Descreva o background que você deseja</h2> 
+
+<!-- 
+    MAIN - CONTEÚDO DENTRO DESSA TAG (MAN) INDICA QUE É O CONTEÚDO PRINCIPAL DA PÁGINA
+    SECTION - SERVE PARA FAZER UMA SEÇÃO (UMA PARTE) DO CONTEÚDO PRINCIPAL DA PÁGINA
+    H2 - SERVE PARA MOSTRAR AO USUÁRIO O QUE DEVE FAZER 
+-->
+
+        <form class="form-group">                          
+          <textarea     
+            rows="5"                                        
+            id="description"
+            placeholder="Ex: Um gradiente azul suave que vai de azul claro ao azul escuro"
+          ></textarea>
+
+<!-- 
+    FORM - CONTAINER QUE AGRUPA ELEMENTOS DE ENTRADA DE DADOS
+    TEXTAREA - DINFERENTE DE UM "IMPUT QUE ACEITA UMA LINHA, É UMA CAIXA DE TEXTO QUE PERMITE TEXTOS LONGOS
+    ROWS="5" DEFINE A ALTURA VISUAL DA CAIXA (ESPAÇO PARA 5 LINHAS DE TEXTO) 
+    PLACEHOLDER - INSTRUÇÃO PARA O USUÁRIO 
+-->
+
+          <button id="generate-btn" class="btn-magic">
+            <span id="btn-text">Gerar Background Mágico</span>
+          </button>
+        </form>
+      </section>
+
+<!--
+    BUTTON - TAG PARA GERAR E MANIPULAR UM BOTÃO NA PÁGINA 
+    "ID=GENERATE-BTN" - IDENTIFICADOR / CPF DO BOTÃO. SERVE PARA USAR FUNCIONALIDADES DO JAVASCRIPT
+    "CLASS=BTN-MAGIC" - DIFERENTE DO ID. SERVE PARA FAZER O BOTÃO BRILHAR, TER GRADIENTES E OU ANIMAÇÕES MÁGICAS
+-->
+
+      <section id="preview-section" class="preview-card"></section>
+
+<!-- 
+    SECTION - SERVE PARA DESTACAR UMA PARTE ESPECÍFICA E IMPORTANTE DA PÁGINA. ONDE O PLANO DE FUNDO SERÁ APLICADO
+    "ID=PREVIEW-SECTION" - IDENTIFICADOR PARA O JAVASCRIPT SABER ONDE APLICAR O PLANO DE FUNDO
+    "CLASS=PREVIEW-SECTION" - DESIGN, CLASSE QUE SERVE PARA APLICAR BORDAS ARREDONDADAS 
+-->
+
+      <section id="code-output" class="code-grid">
+        <div class="card code-card">
+          <h3 class="code-title">Código HTML</h3>
+
+          <pre id="html-code" class="code-block"></pre>
+        </div>
+
+        <div class="card code-card">
+          <h3 class="code-title">Código CSS</h3>
+
+          <pre id="css-code" class="code-block"></pre>
+        </div>
+      </section>
+
+      </main>
+<!--
+    SECTION - SERVE PARA ENVOLVER TUDO
+    "CLASS=CODE-GRID" - SERVE PARA COLOCAR BLOCOS DE HTML E CSS UM AO LADO OU ABAIXO DO OUTRO
+    "CLASS=CODE-CARD" - TANTO UM QUANTO OUTRO SERVEM PARA CRIAR UM BLOCO DE CÓDIGO DE HTML E OUTRO DE CSS
+    "CLASS=CODE-TITLE" - TANTO UM QUANTO OUTRO SERVEM PARA DAR O TITULO DO BLOCO
+    PRE - DIFERENTE DE UMA DIV COMUM, ESSA TAG MANTÉM TODOS OS ESPAÇOS , QUEBRAS DE LINHA E TABULAÇÕES DO TEXTO ORIGINAL. É ESSENCIAL O CÓDIGO DE FORMA LEGÍVEL. 
+    HTML-CODE E CSS-CODE - ELES ESTÃO VAZIOS NO SEU HTML PORQUE O JAVASCRIPT VAI "ESCREVER" DENTRO DELES. QUANDO VOCÊ CLICA NO BOTÃO "GERAR". O SCRIPT GERA AS LINHAS DE CÓDIGO E AS INSERE AUTOMATICAMENTE.     
+-->
+
+
+    <script src="src/js/index.js"></script>
+<!--
+    SERVE PARA LINKAR A PÁGINA DE JAVASCRIPT  
+-->
+
+  </body>
+</html>
